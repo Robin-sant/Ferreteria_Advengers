@@ -59,6 +59,7 @@
     <Compile Include="FormularioPrincipalFrm.Designer.cs">
       <DependentUpon>FormularioPrincipalFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Proveedore.cs" />
     <Compile Include="ProductosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
