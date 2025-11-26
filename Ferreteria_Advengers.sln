@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferreteria_Advengers", "Ferreteria_Advengers\Ferreteria_Advengers.csproj", "{8FC9C211-DCF9-49D4-B400-BC715E4AC293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FC9C211-DCF9-49D4-B400-BC715E4AC293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC9C211-DCF9-49D4-B400-BC715E4AC293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC9C211-DCF9-49D4-B400-BC715E4AC293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC9C211-DCF9-49D4-B400-BC715E4AC293}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73CF432D-EF1E-40F8-BB2A-95B2549DA3D3}
+	EndGlobalSection
+EndGlobal
