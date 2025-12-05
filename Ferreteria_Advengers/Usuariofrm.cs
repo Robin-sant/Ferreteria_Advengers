@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ferreteria_Advengers
 {
-    public partial class usuariofrm : Form
+    public partial class Usuariofrm : Form
     {
-        public usuariofrm()
+        public Usuariofrm()
         {
             InitializeComponent();
         }
