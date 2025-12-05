@@ -71,6 +71,9 @@
     <Compile Include="InventarioFrm.Designer.cs">
       <DependentUpon>InventarioFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Detalle_Compra.cs" />
+    <Compile Include="Models\Detalle_venta.cs" />
+    <Compile Include="Models\Inventario.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
