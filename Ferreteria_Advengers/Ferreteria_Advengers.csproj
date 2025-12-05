@@ -85,6 +85,9 @@
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Cuenta_Cobrar.cs" />
+    <Compile Include="Models\Detalle_Compra.cs" />
+    <Compile Include="Models\Detalle_venta.cs" />
+    <Compile Include="Models\Inventario.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>

@@ -64,7 +64,7 @@
             this.toolMarcas});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1135, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1513, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -73,7 +73,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(85, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(99, 24);
             this.toolStripButton1.Text = "Productos";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -82,7 +82,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(90, 24);
+            this.toolStripButton2.Size = new System.Drawing.Size(108, 24);
             this.toolStripButton2.Text = " Categorias";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -91,7 +91,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(96, 24);
+            this.toolStripButton3.Size = new System.Drawing.Size(115, 24);
             this.toolStripButton3.Text = "Proveedores";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
@@ -100,7 +100,7 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(79, 24);
+            this.toolStripButton4.Size = new System.Drawing.Size(92, 24);
             this.toolStripButton4.Text = "Compras";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -109,7 +109,7 @@
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(115, 24);
+            this.toolStripButton5.Size = new System.Drawing.Size(136, 24);
             this.toolStripButton5.Text = "Cuentas_Cobrar";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -180,11 +180,21 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 428);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1513, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // PrincipalFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 366);
+            this.ClientSize = new System.Drawing.Size(1513, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.IsMdiContainer = true;
