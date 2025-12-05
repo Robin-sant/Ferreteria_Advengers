@@ -43,7 +43,7 @@ namespace Ferreteria_Advengers.Models
             try
             {
                 ccn.Conectar();
-                string consulta = "INSERT INTO productos (codigo_barra, nombre, descripcion, color, unidad_medida, stock_actual, stock_minimo, costo_actual, precio_minorista, precio_mayorista) VALUES" +
+                string consulta = "INSERT INTO productos (codigo_barras, nombre, descripcion, color, unidad_medida, stock_actual, stock_minimo, costo_actual, precio_minorista, precio_mayorista) VALUES" +
                 " (@codigo_barra, @nombre, @descripcion, @color, @unidad_medida, @stock_actual, @stock_minimo, @costo_actual, @precio_minorista, @precio_mayorista)";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
                 comando.Parameters.AddWithValue("@codigo_barra", codigo_barra);
