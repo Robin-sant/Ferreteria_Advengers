@@ -52,7 +52,19 @@
     <Compile Include="CategoriasFrm.Designer.cs">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientesFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientesFrm.Designer.cs">
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Cuentas_CobrarFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas_CobrarFrm.Designer.cs">
+      <DependentUpon>Cuentas_CobrarFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detalle_compraFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,11 @@
       <DependentUpon>Marcafrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Marca.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Cuenta_Cobrar.cs" />
+    <Compile Include="Models\Detalle_Compra.cs" />
+    <Compile Include="Models\Detalle_venta.cs" />
+    <Compile Include="Models\Inventario.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\Venta.cs" />
@@ -118,8 +135,14 @@
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientesFrm.resx">
+      <DependentUpon>ClientesFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComprasFrm.resx">
       <DependentUpon>ComprasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas_CobrarFrm.resx">
+      <DependentUpon>Cuentas_CobrarFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Detalle_compraFrm.resx">
       <DependentUpon>Detalle_compraFrm.cs</DependentUpon>

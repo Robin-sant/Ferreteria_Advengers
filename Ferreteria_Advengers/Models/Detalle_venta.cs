@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ferreteria_Advengers;
 using System.Windows.Forms;
 
 namespace Ferreteria_Advengers.Models
 {
-    internal class Proveedore
+    internal class Detalle_venta
     {
         public static DataTable Obtener()
         {
@@ -18,11 +17,11 @@ namespace Ferreteria_Advengers.Models
             try
             {
                 ccn.Conectar();
-                string consulta = "SELECT * FROM proveedores order by Id_proveedor desc";
+                string consulta = "SELECT * FROM detalle_venta order by id_detalle_venta desc";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
-                SqlDataAdapter adapter = new SqlDataAdapter(comando);
+                SqlDataAdapter adaptar = new SqlDataAdapter(comando);
                 DataTable dt = new DataTable();
-                adapter.Fill(dt);
+                adaptar.Fill(dt);
                 return dt;
             }
             catch (Exception ex)
@@ -34,82 +33,80 @@ namespace Ferreteria_Advengers.Models
             {
                 ccn.Desconectar();
             }
+        }
+        public static bool Guardar(decimal cantidad, decimal precio_unitario, decimal descuento, decimal total)
+        {
+            Conexion ccn = new Conexion();
+            try
+            {
+                ccn.Conectar();
+                string consulta = "INSERT INTO detalle_venta (cantidad, precio_unitario, descuento, total) VALUES (@cantidad, @precio_unitario, @descuento, @total)";
+                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
+                comando.Parameters.AddWithValue("@cantidad", cantidad);
+                comando.Parameters.AddWithValue("@costo_unitario", precio_unitario);
+                comando.Parameters.AddWithValue("@descuento", descuento);
+                comando.Parameters.AddWithValue("@total", total);
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.ToString());
+                return false;
+            }
+            finally
+            {
+                ccn.Desconectar();
+            }
+        }
+        public static bool Editar(int id, decimal cantidad, decimal precio_unitario, decimal descuento, decimal total)
+        {
+            Conexion ccn = new Conexion();
+            try
+            {
+                ccn.Conectar();
+                string consulta = "UPDATE detalle_venta SET cantidad = @cantidad, precio_unitario = @precio_unitario, descuento = @descuento, total = @total WHERE id_detalle_venta = @id";
+                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
+                comando.Parameters.AddWithValue("@id", id);
+                comando.Parameters.AddWithValue("@cantidad", cantidad);
+                comando.Parameters.AddWithValue("@costo_unitario", precio_unitario);
+                comando.Parameters.AddWithValue("@descuento", descuento);
+                comando.Parameters.AddWithValue("@total", total);
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.ToString());
+                return false;
+            }
+            finally
+            {
+                ccn.Desconectar();
+            }
+        }
+        public static bool Eliminar(int id)
+        {
+            Conexion ccn = new Conexion();
+            try
+            {
+                ccn.Conectar();
+                string consulta = "DELETE FROM detalle_venta WHERE id_detalle_venta = @id";
+                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
+                comando.Parameters.AddWithValue("@id", id);
+                comando.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error : " + ex.ToString());
+                return false;
+            }
+            finally
+            {
+                ccn.Desconectar();
+            }
+        }
 
-        }
-        public static bool Guardar(string razon_social, string ruc, string telefono, string email, string direccion)
-        {
-            Conexion ccn = new Conexion();
-            try
-            {
-                ccn.Conectar();
-                string consulta = "INSERT INTO proveedores (razon_social, ruc, telefono, email, direccion) VALUES (@razon_social, @ruc, @telefono, @email, @direccion)";
-                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
-                comando.Parameters.AddWithValue("@razon_social", razon_social);
-                comando.Parameters.AddWithValue("@ruc", ruc);
-                comando.Parameters.AddWithValue("@telefono", telefono);
-                comando.Parameters.AddWithValue("@email", email);
-                comando.Parameters.AddWithValue("@direccion", direccion);
-                comando.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.ToString());
-                return false;
-            }
-            finally
-            {
-                ccn.Desconectar();
-            }
-        }
-        public static bool Editar(int id_proveedor, string razon_social, string ruc, string telefono, string email, string direccion)
-        {
-            Conexion ccn = new Conexion();
-            try
-            {
-                ccn.Conectar();
-                string consulta = "UPDATE proveedores SET razon_social = @razon_social, ruc = @ruc, telefono = @telefono, email = @email, direccion = @direccion WHERE id_proveedor = @id_proveedor";
-                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
-                comando.Parameters.AddWithValue("@id_proveedor", id_proveedor);
-                comando.Parameters.AddWithValue("@razon_social", razon_social);
-                comando.Parameters.AddWithValue("@ruc", ruc);
-                comando.Parameters.AddWithValue("@telefono", telefono);
-                comando.Parameters.AddWithValue("@email", email);
-                comando.Parameters.AddWithValue("@direccion", direccion);
-                comando.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.ToString());
-                return false;
-            }
-            finally
-            {
-                ccn.Desconectar();
-            }
-        }
-        public static bool Eliminar(int id_proveedor)
-        {
-            Conexion ccn = new Conexion();
-            try
-            {
-                ccn.Conectar();
-                string consulta = "DELETE FROM proveedores WHERE id_proveedor = @id_proveedor";
-                SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
-                comando.Parameters.AddWithValue("@id_proveedor", id_proveedor);
-                comando.ExecuteNonQuery();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error : " + ex.ToString());
-                return false;
-            }
-            finally
-            {
-                ccn.Desconectar();
-            }
-        }
     }
 }

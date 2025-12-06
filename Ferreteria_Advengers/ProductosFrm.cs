@@ -75,7 +75,7 @@ namespace Ferreteria_Advengers
 
         private void Guardarbtn_Click(object sender, EventArgs e)
         {
-            string codigo_barra = txtCodigo.Text;
+            int codigo_barra = Convert.ToInt32(txtCodigo.Text);
             string nombre = txtNombre.Text;
             string descripcion = txtDescrip.Text;
             string color = txtColor.Text;

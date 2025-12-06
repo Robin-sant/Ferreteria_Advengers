@@ -14,7 +14,7 @@ namespace Ferreteria_Advengers
 {
     public partial class ProveedoresFrm : Form
     {
-        int Proveedore_id = 0;
+        int id_proveedor = 0;
         public ProveedoresFrm()
         {
             InitializeComponent();
@@ -42,13 +42,13 @@ namespace Ferreteria_Advengers
             string email = txtEmail.Text;
             string direccion = txtDireccion.Text;
             bool resultado = false;
-            if (Proveedore_id == 0)
+            if (id_proveedor == 0)
             {
                 resultado = Proveedore.Guardar(razon_social, ruc, telefono, email, direccion);
             }
             else
             {
-                resultado = Proveedore.Editar(Proveedore_id, razon_social, ruc, telefono, email, direccion);
+                resultado = Proveedore.Editar(id_proveedor, razon_social, ruc, telefono, email, direccion);
             }
             if (resultado)
             {
@@ -66,16 +66,16 @@ namespace Ferreteria_Advengers
             txtTelef.Text = dataGridView1.CurrentRow.Cells["telefono"].Value.ToString();
             txtEmail.Text = dataGridView1.CurrentRow.Cells["email"].Value.ToString();
             txtDireccion.Text = dataGridView1.CurrentRow.Cells["direccion"].Value.ToString();
-            Proveedore_id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value);
+            id_proveedor = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_proveedor"].Value);
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id"].Value.ToString());
-            bool resultado = Proveedore.Eliminar(id);
-            if (resultado)
+            int id_proveedor = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_proveedor"].Value.ToString());
+            bool resultado = Proveedore.Eliminar(id_proveedor);
+            if (id_proveedor != 0)
             {
-                MessageBox.Show("Proveedor eliminado correctamente.");
+                Proveedore.Eliminar(id_proveedor);
             }
             dataGridView1.DataSource = Proveedore.Obtener();
             limpiar();

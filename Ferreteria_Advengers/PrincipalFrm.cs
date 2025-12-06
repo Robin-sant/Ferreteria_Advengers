@@ -33,7 +33,7 @@ namespace Ferreteria_Advengers
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            ProductosFrm frm = new ProductosFrm();
+            ProveedoresFrm frm = new ProveedoresFrm();
             frm.MdiParent = this;
             frm.Show();
         }
@@ -41,6 +41,28 @@ namespace Ferreteria_Advengers
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             ComprasFrm frm = new ComprasFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            Cuentas_CobrarFrm frm = new Cuentas_CobrarFrm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            Detalle_compraFrm frm = new Detalle_compraFrm();
+
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void toolClientes_Click(object sender, EventArgs e)
+        {
+            ClientesFrm frm = new ClientesFrm();
             frm.MdiParent = this;
             frm.Show();
         }

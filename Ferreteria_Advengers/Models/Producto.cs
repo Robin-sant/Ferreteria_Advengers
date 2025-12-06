@@ -36,14 +36,14 @@ namespace Ferreteria_Advengers.Models
                 ccn.Desconectar();
             }
         }
-        public static bool Guardar(string codigo_barra, string nombre, string descripcion, string color, string unidad_medida, int stock_actual, int stock_minimo,
+        public static bool Guardar(int codigo_barra, string nombre, string descripcion, string color, string unidad_medida, int stock_actual, int stock_minimo,
             decimal costo_actual, decimal precio_minorista, decimal precio_mayorista)
         {
             Conexion ccn = new Conexion();
             try
             {
                 ccn.Conectar();
-                string consulta = "INSERT INTO productos (codigo_barra, nombre, descripcion, color, unidad_medida, stock_actual, stock_minimo, costo_actual, precio_minorista, precio_mayorista) VALUES" +
+                string consulta = "INSERT INTO productos (codigo_barras, nombre, descripcion, color, unidad_medida, stock_actual, stock_minimo, costo_actual, precio_minorista, precio_mayorista) VALUES" +
                 " (@codigo_barra, @nombre, @descripcion, @color, @unidad_medida, @stock_actual, @stock_minimo, @costo_actual, @precio_minorista, @precio_mayorista)";
                 SqlCommand comando = new SqlCommand(consulta, ccn.ObtenerConexion());
                 comando.Parameters.AddWithValue("@codigo_barra", codigo_barra);
@@ -69,7 +69,7 @@ namespace Ferreteria_Advengers.Models
                 ccn.Desconectar();
             }
         }
-        public static bool Editar(int id, string codigo_barra, string nombre, string descripcion, string color, string unidad_medida, int stock_actual, int stock_minimo,
+        public static bool Editar(int id, int codigo_barra, string nombre, string descripcion, string color, string unidad_medida, int stock_actual, int stock_minimo,
             decimal costo_actual, decimal precio_minorista, decimal precio_mayorista)
         {
             Conexion ccn = new Conexion();
