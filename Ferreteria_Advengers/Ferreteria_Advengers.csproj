@@ -71,7 +71,16 @@
     <Compile Include="InventarioFrm.Designer.cs">
       <DependentUpon>InventarioFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Marcafrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Marcafrm.Designer.cs">
+      <DependentUpon>Marcafrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Marca.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="PrincipalFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +103,18 @@
     <Compile Include="ProveedoresFrm.Designer.cs">
       <DependentUpon>ProveedoresFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuariofrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuariofrm.Designer.cs">
+      <DependentUpon>Usuariofrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasFrm.Designer.cs">
+      <DependentUpon>VentasFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoriasFrm.resx">
       <DependentUpon>CategoriasFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventarioFrm.resx">
       <DependentUpon>InventarioFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Marcafrm.resx">
+      <DependentUpon>Marcafrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalFrm.resx">
       <DependentUpon>PrincipalFrm.cs</DependentUpon>
@@ -126,6 +150,12 @@
     </Compile>
     <EmbeddedResource Include="ProveedoresFrm.resx">
       <DependentUpon>ProveedoresFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuariofrm.resx">
+      <DependentUpon>Usuariofrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasFrm.resx">
+      <DependentUpon>VentasFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
